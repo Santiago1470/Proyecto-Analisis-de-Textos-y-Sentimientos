@@ -1,0 +1,140 @@
+
+
+html, body {
+    height: 100svh;
+    margin: 0px;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor-titulo {
+    text-align: center;
+}
+
+.contenedor {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    padding: 0px 20px;
+    justify-content: center;
+    height: 100%;
+}
+
+
+.contenedor-mapa {
+    width: 100%;
+    border: 1px solid rgb(203, 203, 203);
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+/*
+.contenedor-mapa p {
+    width: 100px;
+} */
+
+.contenedor-texto {
+    width: 100%;
+    /* height: 100svh;
+    display: grid;
+    grid-template-rows: repeat(1, 90% 10%); */
+    /* border: 1px solid black; */
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 100%;
+    max-height: 100%;
+}
+
+.contenedor-respuesta {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    height: 80%;
+    max-height: 70svh;
+    padding: 10px;
+    overflow-y: scroll;
+}
+
+.contenedor-usuario {
+    margin: 10px 5px 10px auto;
+    padding: 5px;
+    text-align: right;
+    border: 1px solid rgb(194, 194, 194);
+    border-radius: 10px;
+    box-shadow: 0px 3px 5px 0px rgb(216, 216, 216);
+}
+
+/* .contenedor-respuesta textarea {
+    height: 100%;
+    border: none;
+    resize: none;
+}
+
+.contenedor-respuesta textarea:disabled {
+    background-color: white;
+} */
+
+
+.contenedor-pregunta {
+    height: 20%;
+    border: 1px solid rgb(210, 210, 210);
+    box-shadow: 0px 3px 5px 0px rgb(216, 216, 216);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contenedor-pregunta textarea {
+    resize: none;
+    border: none;
+    height: 100%;
+}
+
+.contenedor-pregunta textarea:focus {
+    background-color: white;
+    box-shadow: none;
+}
+
+.contenedor-botones {
+    text-align: right;
+    padding: 0px 5px 5px 0px;
+}
+    .contenedor-analisis {
+        height: 60%;
+    }
+    
+    .contenedor-botones {
+        height: 40%;
+    }
+
+@media (max-width: 760px) {
+    .contenedor {
+        grid-template-columns: repeat(1, 100%);
+        grid-template-rows: repeat(1, 100%);
+        padding: 0px 10px;
+    }
+
+    .contenedor-texto {
+        padding: 0px;
+        margin-bottom: 10px;
+    }
+
+    .contenedor-respuesta {
+        height: 70%;
+        padding-bottom: 10px;
+        overflow-y: scroll;
+    }
+    
+    .contenedor-pregunta {
+        display: flex;
+        flex-direction: column;
+        height: 30%;
+        border: 1px solid rgb(210, 210, 210);
+        box-shadow: 0px 3px 5px 0px rgb(216, 216, 216);
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot: Recomendación de lugares turísticos en Bogotá D.C.</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='css/index.css') }}">
+</head>
+
+<body>
+    <div class="contenedor-titulo">
+        <h1>ChatBot: Recomendación de lugares turísticos en Bogotá D.C.</h1>
+    </div>
+    <div class="contenedor">
+        <div class="contenedor-mapa" id="map"></div>
+        <div class="contenedor-texto">
+            <div class="contenedor-respuesta" id="textoChat">
+                <!-- <textarea class="form-control" id="textaRespuesta" rows="3" ></textarea> -->
+                <!-- <div class="contenedor-usuario" id="textoUsuario">
+                    hola
+                </div> -->
+                <!-- <div class="contenedor-bot" id="textoBot">
+                    si
+                 </div> -->
+            </div>
+            <div class="contenedor-pregunta">
+                <div class="contenedor-analisis">
+                    <textarea class="form-control" id="textaAnalizar" rows="3" placeholder="¿Qué buscas?"></textarea>
+                </div>
+                <div class="contenedor-botones">
+                    <input class="btn btn-primary" type="button" value="Enviar" id="buscar">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', path='/js/index.js') }}"></script>
+</body>
+
+</html>
