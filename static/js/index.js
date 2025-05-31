@@ -1,7 +1,7 @@
 var comentarios = {}
 
-let map;  // Variable global
-let marker; // Para el marcador
+let map;
+let marker;
 
 $(document).ready(function () {
     // Inicializar mapa centrado en Bogotá
@@ -39,13 +39,12 @@ $(document).ready(function () {
 
                 $("#textaAnalizar").val("");
 
-                // Mostrar marcador en el mapa si hay datos
                 if (data[0].lugar && data[0].lugar.lat && data[0].lugar.lng) {
                     const lat = data[0].lugar.lat;
                     const lng = data[0].lugar.lng;
                     const nombre = data[0].lugar.nombre;
 
-                    map.setView([lat, lng], 15); // Cambiar vista
+                    map.setView([lat, lng], 15);
 
                     if (marker) {
                         map.removeLayer(marker);
